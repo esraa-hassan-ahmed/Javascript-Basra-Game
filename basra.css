@@ -1,0 +1,227 @@
+body{
+    margin:0;
+}
+.interface{
+    width: 100%;
+    height: 100%;
+    background-image: url(cards/img%202.jpg);
+   /* background: linear-gradient(#006400,#008000);*/
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px
+}
+.BG{
+    background-image: url(cards/img%202.jpg);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows:25vh 50vh 25vh;
+    grid-template-areas:"computer_content" "game_content" "player_content";
+}
+.player_content{
+    grid-area: player_content;
+    display: grid;
+    grid-template-columns:1fr 2fr 1fr;
+    grid-template-areas: ". player player_score";
+}
+.player{
+    grid-area: player;
+    background-color: rgba(0,0,0,0.4);
+    text-align: center;
+    width: 505px;
+    height: 163px;
+    margin: auto;
+    border-radius: 15px;
+}
+.player_score{
+    grid-area: player_score;
+    width: 60%;
+    height: 60%;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 15px;
+    font-size: 19px;
+    border: 2px solid white;
+    margin: auto;
+    color:white;
+    text-align: center
+}
+.computer_content{
+    grid-area: computer_content;
+    display: grid;
+    grid-template-columns:1fr 2fr 1fr;
+    grid-template-areas: "comTimer allGrids  computer_score";
+}
+.allGrids{
+    grid-area: allGrids;
+    background-color: rgba(0,0,0,0.4); 
+    text-align: center;
+    width: 505px;
+    height: 163px;
+    margin: auto;
+    border-radius: 15px;
+    position: relative
+}
+.allGrids div{
+    position: absolute;
+    top: 0%;
+    left: 6%
+}
+.computer *,.player *,.ground *,.insertBack *{
+    padding: 6px 8px;
+}
+.computer_score{
+    grid-area: computer_score;
+    width: 60%;
+    height: 60%;
+    border: 2px solid white;
+    margin: auto;
+    color:white;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 15px;
+    font-size: 19px;
+
+}
+.comTimer{
+    grid-area: comTimer;
+    width: 60%;
+    height: 60%;
+    border: 2px solid white;
+    margin: auto;
+    color:white;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 15px;
+    font-size: 19px;
+}
+.comTimer p{
+    margin-bottom:10px
+}
+.game_content{
+    grid-area: game_content;
+    display: grid;
+    grid-template-columns:1fr 2fr 1fr;
+    grid-template-areas: "deck ground round_turn";
+}
+.deck{
+    grid-area: deck;
+    position: relative; 
+}
+.theName{
+    width: 20%;
+    height: 8%;
+    border: 2px solid white;
+    margin: auto;
+    padding: 10px;
+    color:white;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 15px;
+    font-size: 19px;
+    position: absolute;
+    top:6%;
+    left: 37%;
+}
+.deck img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.backImages img:nth-child(2){
+    top: 49%;
+    left: 49%;
+    transform: translate(-50%,-50%);
+}
+.backImages img:nth-child(3){
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.backImages img:last-of-type{
+    top: 51%;
+    left: 51%;
+    transform: translate(-50%,-50%);
+}
+.ground{
+    grid-area: ground;
+    margin: auto;
+}
+.round_turn{
+    grid-area: round_turn;
+    width: 60%;
+    height: 35%;
+    border: 2px solid white;
+    margin: auto;
+    color:white;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 15px;
+    font-size: 19px;
+}
+img{
+    width: 95px;
+    height: 145px;
+}
+#myBtn{
+    background-color: #3C4C75;
+    border: none;
+    color: white;
+    width: 140px;
+    height: 52px;
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 12px 10px 0 rgba(0,0,0,0.6), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#myBtn:hover {
+    box-shadow: 0 12px 10px 0 rgba(0,0,0,0.5), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: white;
+    border: 2px solid #3C4C75;
+    color: #3C4C75
+}
+#playAgainBtn{
+    background-color: #3C4C75;
+    border: none;
+    color: white;
+    padding: 20px;
+    width: 200px;
+    height: 70px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+#playAgainBtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+#playAgainBtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+#playAgainBtn:hover span {
+  padding-right: 25px;
+}
+#playAgainBtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.myStatus{
+    margin-bottom: 60px;
+}
+

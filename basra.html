@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <meta charset="utf.8">
+        <meta name= "description" content= "welcome to my game" >
+        <title> Final_Project </title>
+        <link rel= "stylesheet" href= "basra.css"> 
+    </head>
+    <body>
+        <div class="BG">
+            <div class="computer_content">
+                <div class="comTimer">
+                    <p> Computer Timer </p>
+                    <span id="timerSec"> 0 </span> 
+                    <span> Sec </span>
+                </div>
+                <div class="allGrids">
+                    <div class="computer"> </div>
+                    <div class="insertBack"> </div>  
+                </div>
+                <div class="computer_score">
+                    <p> Player 2 (Computer) </p> 
+                    Score: <span id="score"> 0 </span>
+                </div>
+            </div> 
+            <div class="game_content">
+                <div class="deck">
+                    <div class="theName">
+                        Deck
+                    </div>
+                    <img id="1" class="myImg" src="cards/1_of_clubs.png">
+                    <img id="1" class="myImg" src="cards/1_of_diamonds.png">
+                    <img id="1" class="myImg" src="cards/1_of_hearts.png">
+                    <img id="1" class="myImg" src="cards/1_of_spades.png">
+                    <img id="2" class="myImg" src="cards/2_of_clubs.png">
+                    <img id="2" class="myImg" src="cards/2_of_diamonds.png">
+                    <img id="2" class="myImg" src="cards/2_of_hearts.png">
+                    <img id="2" class="myImg" src="cards/2_of_spades.png">
+                    <img id="3" class="myImg" src="cards/3_of_clubs.png">
+                    <img id="3" class="myImg" src="cards/3_of_diamonds.png">
+                    <img id="3" class="myImg" src="cards/3_of_hearts.png">
+                    <img id="3" class="myImg" src="cards/3_of_spades.png">
+                    <img id="4" class="myImg" src="cards/4_of_clubs.png">
+                    <img id="4" class="myImg" src="cards/4_of_diamonds.png">
+                    <img id="4" class="myImg" src="cards/4_of_hearts.png">
+                    <img id="4" class="myImg" src="cards/4_of_spades.png">
+                    <img id="5" class="myImg" src="cards/5_of_clubs.png">
+                    <img id="5" class="myImg" src="cards/5_of_diamonds.png">
+                    <img id="5" class="myImg" src="cards/5_of_hearts.png">
+                    <img id="5" class="myImg" src="cards/5_of_spades.png">
+                    <img id="6" class="myImg" src="cards/6_of_clubs.png">
+                    <img id="6" class="myImg" src="cards/6_of_diamonds.png">
+                    <img id="6" class="myImg" src="cards/6_of_hearts.png">
+                    <img id="6" class="myImg" src="cards/6_of_spades.png">
+                    <img id="7" class="myImg" src="cards/7_of_clubs.png">
+                    <img id="7" class="myImg" alt="komy" src="cards/7_of_diamonds.png">
+                    <img id="7" class="myImg" src="cards/7_of_hearts.png">
+                    <img id="7" class="myImg" src="cards/7_of_spades.png">
+                    <img id="8" class="myImg" src="cards/8_of_clubs.png">
+                    <img id="8" class="myImg" src="cards/8_of_diamonds.png">
+                    <img id="8" class="myImg" src="cards/8_of_hearts.png">
+                    <img id="8" class="myImg" src="cards/8_of_spades.png">
+                    <img id="9" class="myImg" src="cards/9_of_clubs.png">
+                    <img id="9" class="myImg" src="cards/9_of_diamonds.png">
+                    <img id="9" class="myImg" src="cards/9_of_hearts.png">
+                    <img id="9" class="myImg" src="cards/9_of_spades.png">
+                    <img id="10" class="myImg" src="cards/10_of_clubs.png">
+                    <img id="10" class="myImg" src="cards/10_of_diamonds.png">
+                    <img id="10" class="myImg" src="cards/10_of_hearts.png">
+                    <img id="10" class="myImg" src="cards/10_of_spades.png">
+                    <img id="11" class="myImg" src="cards/jack_of_clubs.png">
+                    <img id="11" class="myImg" src="cards/jack_of_diamonds.png">
+                    <img id="11" class="myImg" src="cards/jack_of_hearts.png">
+                    <img id="11" class="myImg" src="cards/jack_of_spades.png">
+                    <img id="12" class="myImg" src="cards/king_of_clubs.png">
+                    <img id="12" class="myImg" src="cards/king_of_diamonds.png">
+                    <img id="12" class="myImg" src="cards/king_of_hearts.png">
+                    <img id="12" class="myImg" src="cards/king_of_spades.png">
+                    <img id="13" class="myImg" src="cards/queen_of_clubs.png">
+                    <img id="13" class="myImg" src="cards/queen_of_diamonds.png">
+                    <img id="13" class="myImg" src="cards/queen_of_hearts.png">
+                    <img id="13" class="myImg" src="cards/queen_of_spades.png">
+                    <div class="backImages">
+                        <img class="facedown" src="cards/facedown.png">
+                        <img class="facedown" src="cards/facedown.png">
+                        <img class="facedown" src="cards/facedown.png">
+                        <img class="facedown" src="cards/facedown.png">
+                    </div>
+                </div>
+                <div class="ground">
+                    <button id="myBtn"> Start </button>
+                </div>
+                <div class="round_turn">
+                    <p> Round: <span id="roundNum"> 0 </span> </p>
+                    Turn: Player <span id="playerNum"> 0 </span>
+                </div>
+            </div>
+            <div class="player_content">
+                <div class="player"></div>
+                <div class="player_score">
+                    <p>Player 1 (You) </p> 
+                    Score: <span id="score"> 0 </span>
+                </div>
+            </div>
+        </div>
+        <div class="interface">
+            <div>
+                <h1 class="myStatus"> Congratulations You Are Winner </h1>
+                <button id="playAgainBtn"> <span>Play Again </span></button>
+            </div>
+        </div>
+        
+        <script src="jquery-3.1.1.js"></script>
+		<script src="basra.js"></script>     
+    </body>
+</html>
+
+
+
+
