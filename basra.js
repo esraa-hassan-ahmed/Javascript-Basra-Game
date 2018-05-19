@@ -70,8 +70,7 @@ function player(){
 	if(this.getAttribute("id")=="11" || this.getAttribute("alt")=="komy"){
 		flag=true;
 		if($(".ground img").length==0){
-			$(".ground").append(this);
-			mySetTime();
+			flag=false
 		}
 		else{
 			count=count+$(".ground img").length;
@@ -85,7 +84,7 @@ function player(){
 			},1000);
 		}
 	}
-	if(flag==false){
+	else{
 		if(this.getAttribute("id")=="12" || this.getAttribute("id")=="13"){
 			//debugger;
 			for(var i=$(".ground img").length-1;i>=0;i--){	
@@ -230,9 +229,9 @@ function computer(randomNumComputer){
 	$(".ground").append($(".computer img").eq(randomNumComputer));
 	//console.log($(".computer img").eq(randomNumComputer));
 	var len=$(".ground img").length;
-	if($(".ground img").eq($(".ground img").length-1).attr("id")=="11" || $(".ground img").eq($(".ground img").length-1).attr("alt")=="komy"){
-		flag=true;
+	if($(".ground img").eq($(".ground img").length-1).attr("id")=="11" || $(".ground img").eq($(".ground img").length-1).attr("alt")=="komy"){	
 		if($(".ground img").length > 1){
+			flag=true;
 			count2=count2+$(".ground img").length-1;
 			$(".ground img").css("border","4px solid red");
 			$(".ground img").eq($(".ground img").length-1).css("border","4px solid red");
@@ -242,10 +241,10 @@ function computer(randomNumComputer){
 			},1000);
 		}
 		else{
-			 myTime();
+			flag=false;
 		}
 	}
-	if(flag==false){
+	else{
 		if($(".ground img").eq($(".ground img").length-1).attr("id")=="12" || $(".ground img").eq($(".ground img").length-1).attr("id")=="13"){
 			for(var i=$(".ground img").length-2;i>=0;i--){	
 			//debugger;
